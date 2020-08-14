@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ia_blocks
+    - node.type.localgov_homepage
+    - paragraphs.paragraphs_type.homepage_ia_blocks
+  module:
+    - entity_reference_revisions
+id: node.localgov_homepage.field_ia_blocks
+field_name: field_ia_blocks
+entity_type: node
+bundle: localgov_homepage
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      homepage_ia_blocks: homepage_ia_blocks
+    target_bundles_drag_drop:
+      advanced_links:
+        weight: 7
+        enabled: false
+      homepage_ia_blocks:
+        enabled: true
+        weight: 8
+      homepage_icons:
+        weight: 9
+        enabled: false
+      pagebuilder_image:
+        weight: 10
+        enabled: false
+      pagebuilder_text:
+        weight: 11
+        enabled: false
+      topic_list_builder:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

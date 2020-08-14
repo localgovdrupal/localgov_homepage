@@ -1,0 +1,9 @@
+type: module
+name: LocalGov Drupal homepage
+description: A LocalGov Drupal flavoured Homepage content type.
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - field_group:field_group
+  - fontawesome:fontawesome
+  - localgov_campaigns:localgov_campaigns_paragraphs
+  - localgov_paragraphs:localgov_paragraphs

@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage_icons.field_icon
+    - field.field.paragraph.homepage_icons.field_link
+    - field.field.paragraph.homepage_icons.field_title
+    - paragraphs.paragraphs_type.homepage_icons
+  module:
+    - fontawesome
+    - link
+id: paragraph.homepage_icons.default
+targetEntityType: paragraph
+bundle: homepage_icons
+mode: default
+content:
+  field_icon:
+    weight: 103
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_icon_widget
+    region: content
+  field_link:
+    weight: 102
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

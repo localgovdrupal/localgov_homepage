@@ -1,0 +1,84 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_homepage_icons
+    - node.type.localgov_homepage
+    - paragraphs.paragraphs_type.homepage_icons
+  module:
+    - entity_reference_revisions
+id: node.localgov_homepage.field_homepage_icons
+field_name: field_homepage_icons
+entity_type: node
+bundle: localgov_homepage
+label: 'Calls to action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      homepage_icons: homepage_icons
+    target_bundles_drag_drop:
+      advanced_links:
+        weight: 6
+        enabled: false
+      homepage_icons:
+        enabled: true
+        weight: 7
+      pagebuilder_image:
+        weight: 8
+        enabled: false
+      pagebuilder_text:
+        weight: 9
+        enabled: false
+      topic_list_builder:
+        weight: 10
+        enabled: false
+      box_link:
+        weight: 21
+        enabled: false
+      box_link_page_builder_:
+        weight: 22
+        enabled: false
+      call_out_box:
+        weight: 23
+        enabled: false
+      call_out_box_page_builder_:
+        weight: 24
+        enabled: false
+      fact_box:
+        weight: 25
+        enabled: false
+      fact_boxes_page_builder_:
+        weight: 26
+        enabled: false
+      homepage_ia_blocks:
+        weight: 27
+        enabled: false
+      link_and_summary:
+        weight: 29
+        enabled: false
+      link_and_summary_page_builder_:
+        weight: 30
+        enabled: false
+      page_builder_layout:
+        weight: 33
+        enabled: false
+      quote:
+        weight: 34
+        enabled: false
+      quote_box_page_builder_:
+        weight: 35
+        enabled: false
+      text_field_page_builder_:
+        weight: 36
+        enabled: false
+      video_page_builder_:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

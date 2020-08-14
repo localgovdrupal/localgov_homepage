@@ -1,0 +1,12 @@
+{
+    "name": "localgovdrupal/localgov_homepage",
+    "description": "A LocalGov Drupal flavoured Homepage content type.",
+    "type": "drupal-module",
+    "homepage": "https://github.com/localgovdrupal/localgov_menu_link_group",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "fontawesome": "^2.17",
+        "localgovdrupal/localgov_campaigns": "dev-master",
+        "localgovdrupal/localgov_paragraphs": "dev-master"
+    }
+}

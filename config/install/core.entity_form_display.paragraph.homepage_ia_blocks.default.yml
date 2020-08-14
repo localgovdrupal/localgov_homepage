@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage_ia_blocks.field_link
+    - field.field.paragraph.homepage_ia_blocks.field_links
+    - field.field.paragraph.homepage_ia_blocks.field_promoted
+    - field.field.paragraph.homepage_ia_blocks.field_title
+    - paragraphs.paragraphs_type.homepage_ia_blocks
+  module:
+    - link
+id: paragraph.homepage_ia_blocks.default
+targetEntityType: paragraph
+bundle: homepage_ia_blocks
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_links:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_promoted:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

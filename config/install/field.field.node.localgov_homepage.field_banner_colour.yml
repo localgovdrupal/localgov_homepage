@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_colour
+    - node.type.localgov_homepage
+  module:
+    - options
+id: node.localgov_homepage.field_banner_colour
+field_name: field_banner_colour
+entity_type: node
+bundle: localgov_homepage
+label: 'Banner colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

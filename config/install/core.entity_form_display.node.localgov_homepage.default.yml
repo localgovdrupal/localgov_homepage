@@ -1,0 +1,224 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.localgov_homepage.field_banner
+    - field.field.node.localgov_homepage.field_banner_colour
+    - field.field.node.localgov_homepage.field_homepage_icons
+    - field.field.node.localgov_homepage.field_ia_blocks
+    - field.field.node.localgov_homepage.field_newsroom
+    - image.style.thumbnail
+    - node.type.localgov_homepage
+  module:
+    - field_group
+    - image
+    - path
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_description
+        - group_banner
+        - group_icons
+        - group_ca
+        - group_newsroom
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Tabs
+    group_description:
+      children:
+        - title
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: Description
+    group_icons:
+      children:
+        - field_homepage_icons
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Calls to action'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Calls to action'
+    group_ca:
+      children:
+        - field_ia_blocks
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        label: Services
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: Services
+    group_banner:
+      children:
+        - field_banner_colour
+        - field_banner
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: Banner
+    group_newsroom:
+      children:
+        - field_newsroom
+      parent_name: group_tabs
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: Newsroom
+id: node.localgov_homepage.default
+targetEntityType: node
+bundle: localgov_homepage
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner:
+    weight: 28
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_colour:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_homepage_icons:
+    type: custom_entity_reference_paragraphs
+    weight: 10
+    settings:
+      title: 'Call to action'
+      title_plural: 'Calls to action'
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: homepage_icons
+      hide_type: '1'
+      description_field: field_title
+    third_party_settings: {  }
+    region: content
+  field_ia_blocks:
+    type: custom_entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: homepage_ia_blocks
+      hide_type: '1'
+      description_field: field_title
+    third_party_settings: {  }
+    region: content
+  field_newsroom:
+    type: custom_entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Article
+      title_plural: Articles
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: newsroom_teasers
+      hide_type: '1'
+      description_field: field_title
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

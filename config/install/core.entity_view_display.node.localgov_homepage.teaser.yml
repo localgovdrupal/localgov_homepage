@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.localgov_homepage.field_banner
+    - field.field.node.localgov_homepage.field_homepage_icons
+    - field.field.node.localgov_homepage.field_ia_blocks
+    - field.field.node.localgov_homepage.field_newsroom
+    - node.type.localgov_homepage
+  module:
+    - user
+id: node.localgov_homepage.teaser
+targetEntityType: node
+bundle: localgov_homepage
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_banner: true
+  field_banner_colour: true
+  field_homepage_icons: true
+  field_ia_blocks: true
+  field_newsroom: true
