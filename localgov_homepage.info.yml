@@ -1,6 +1,7 @@
 type: module
 name: LocalGov Drupal homepage
 description: A LocalGov Drupal flavoured Homepage content type.
+package: LocalGovDrupal
 core_version_requirement: ^8.8 || ^9
 dependencies:
   - field_group:field_group
