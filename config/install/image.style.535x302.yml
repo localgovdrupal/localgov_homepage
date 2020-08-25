@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - crop.type.16_9
+    - crop.type.news_16_9
   module:
     - crop
 name: 535x302
@@ -21,4 +21,4 @@ effects:
     id: crop_crop
     weight: -10
     data:
-      crop_type: '16_9'
+      crop_type: 'news_16_9'

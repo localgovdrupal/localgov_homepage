@@ -8,5 +8,4 @@ dependencies:
   - crop:crop
   - field_group:field_group
   - fontawesome:fontawesome
-  - localgov_campaigns:localgov_campaigns_paragraphs
-  - localgov_paragraphs:localgov_paragraphs
+  - paragraphs:paragraphs
