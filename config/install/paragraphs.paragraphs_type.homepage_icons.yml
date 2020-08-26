@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: homepage_icons
-label: 'Homepage icons'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_ia_blocks
     - node.type.localgov_homepage
-    - paragraphs.paragraphs_type.homepage_ia_blocks
+    - paragraphs.paragraphs_type.localgov_homepage_ia_blocks
   module:
     - entity_reference_revisions
 id: node.localgov_homepage.field_ia_blocks
@@ -22,24 +22,12 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      homepage_ia_blocks: homepage_ia_blocks
+      localgov_homepage_ia_blocks: localgov_homepage_ia_blocks
     target_bundles_drag_drop:
-      advanced_links:
-        weight: 7
-        enabled: false
-      homepage_ia_blocks:
+      localgov_homepage_ia_blocks:
         enabled: true
         weight: 8
-      homepage_icons:
+      localgov_homepage_icons:
         weight: 9
-        enabled: false
-      pagebuilder_image:
-        weight: 10
-        enabled: false
-      pagebuilder_text:
-        weight: 11
-        enabled: false
-      topic_list_builder:
-        weight: 12
         enabled: false
 field_type: entity_reference_revisions

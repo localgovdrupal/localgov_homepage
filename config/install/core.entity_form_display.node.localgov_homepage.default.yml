@@ -132,7 +132,7 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: homepage_icons
+      default_paragraph_type: localgov_homepage_icons
       hide_type: '1'
       description_field: field_title
     third_party_settings: {  }
@@ -146,7 +146,7 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: homepage_ia_blocks
+      default_paragraph_type: localgov_homepage_ia_blocks
       hide_type: '1'
       description_field: field_title
     third_party_settings: {  }
@@ -160,7 +160,7 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: newsroom_teasers
+      default_paragraph_type: localgov_newsroom_teasers
       hide_type: '1'
       description_field: field_title
     third_party_settings: {  }

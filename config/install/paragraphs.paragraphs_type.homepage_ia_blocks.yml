@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: homepage_ia_blocks
-label: 'Homepage IA blocks'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

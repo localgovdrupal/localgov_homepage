@@ -12,13 +12,19 @@ use Drupal\KernelTests\KernelTestBase;
 class InstallationTest extends KernelTestBase {
 
   /**
+   * These modules must be present as part of our test env.
+   *
+   * @var array
+   */
+  public static $modules = ['user'];
+
+  /**
    * Module installation test.
    *
    * Should add the localgov_homepage content type.
    */
   public function testInstallation() {
 
-    $this->container->get('module_installer')->install(['user']);
     $this->container->get('module_installer')->install(['localgov_homepage']);
 
     $available_content_types = $this->container->get('entity_type.bundle.info')->getBundleInfo('node');
