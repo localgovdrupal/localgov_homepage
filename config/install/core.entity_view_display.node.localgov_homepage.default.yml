@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_homepage.field_banner
-    - field.field.node.localgov_homepage.field_banner_colour
-    - field.field.node.localgov_homepage.field_homepage_icons
-    - field.field.node.localgov_homepage.field_ia_blocks
-    - field.field.node.localgov_homepage.field_newsroom
+    - field.field.node.localgov_homepage.localgov_homepage_banner
+    - field.field.node.localgov_homepage.localgov_homepage_banner_colour
+    - field.field.node.localgov_homepage.localgov_homepage_labelled_icons
+    - field.field.node.localgov_homepage.localgov_homepage_ia_blocks
+    - field.field.node.localgov_homepage.localgov_homepage_newsroom
     - node.type.localgov_homepage
   module:
     - entity_reference_revisions
@@ -16,7 +16,7 @@ targetEntityType: node
 bundle: localgov_homepage
 mode: default
 content:
-  field_homepage_icons:
+  localgov_homepage_labelled_icons:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: hidden
@@ -25,7 +25,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_ia_blocks:
+  localgov_homepage_ia_blocks:
     type: entity_reference_revisions_entity_view
     weight: 2
     label: hidden
@@ -34,7 +34,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_newsroom:
+  localgov_homepage_newsroom:
     type: entity_reference_revisions_entity_view
     weight: 3
     label: above
@@ -49,6 +49,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_banner: true
-  field_banner_colour: true
+  localgov_homepage_banner: true
+  localgov_homepage_banner_colour: true
   search_api_excerpt: true

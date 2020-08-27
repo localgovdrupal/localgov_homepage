@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_colour
+    - field.storage.node.localgov_homepage_banner_colour
     - node.type.localgov_homepage
   module:
     - options
-id: node.localgov_homepage.field_banner_colour
-field_name: field_banner_colour
+id: node.localgov_homepage.localgov_homepage_banner_colour
+field_name: localgov_homepage_banner_colour
 entity_type: node
 bundle: localgov_homepage
 label: 'Banner colour'

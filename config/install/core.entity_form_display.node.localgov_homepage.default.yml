@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_homepage.field_banner
-    - field.field.node.localgov_homepage.field_banner_colour
-    - field.field.node.localgov_homepage.field_homepage_icons
-    - field.field.node.localgov_homepage.field_ia_blocks
-    - field.field.node.localgov_homepage.field_newsroom
+    - field.field.node.localgov_homepage.localgov_homepage_banner
+    - field.field.node.localgov_homepage.localgov_homepage_banner_colour
+    - field.field.node.localgov_homepage.localgov_homepage_labelled_icons
+    - field.field.node.localgov_homepage.localgov_homepage_ia_blocks
+    - field.field.node.localgov_homepage.localgov_homepage_newsroom
     - image.style.thumbnail
     - node.type.localgov_homepage
   module:
@@ -47,7 +47,7 @@ third_party_settings:
       region: content
     group_icons:
       children:
-        - field_homepage_icons
+        - localgov_homepage_labelled_icons
       parent_name: group_tabs
       weight: 22
       format_type: tab
@@ -62,7 +62,7 @@ third_party_settings:
       region: content
     group_ca:
       children:
-        - field_ia_blocks
+        - localgov_homepage_ia_blocks
       parent_name: group_tabs
       weight: 23
       format_type: tab
@@ -77,8 +77,8 @@ third_party_settings:
       region: content
     group_banner:
       children:
-        - field_banner_colour
-        - field_banner
+        - localgov_homepage_banner_colour
+        - localgov_homepage_banner
       parent_name: group_tabs
       weight: 21
       format_type: tab
@@ -92,7 +92,7 @@ third_party_settings:
       region: content
     group_newsroom:
       children:
-        - field_newsroom
+        - localgov_homepage_newsroom
       parent_name: group_tabs
       weight: 24
       format_type: tab
@@ -115,7 +115,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner:
+  localgov_homepage_banner:
     weight: 28
     settings:
       preview_image_style: thumbnail
@@ -123,13 +123,13 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_banner_colour:
+  localgov_homepage_banner_colour:
     weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_homepage_icons:
+  localgov_homepage_labelled_icons:
     type: custom_entity_reference_paragraphs
     weight: 10
     settings:
@@ -138,12 +138,12 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: localgov_homepage_icons
+      default_paragraph_type: localgov_labelled_icons
       hide_type: '1'
-      description_field: field_title
+      description_field: localgov_labelled_icons_title
     third_party_settings: {  }
     region: content
-  field_ia_blocks:
+  localgov_homepage_ia_blocks:
     type: custom_entity_reference_paragraphs
     weight: 11
     settings:
@@ -152,12 +152,12 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: localgov_homepage_ia_blocks
+      default_paragraph_type: localgov_ia_blocks
       hide_type: '1'
-      description_field: field_title
+      description_field: localgov_ia_blocks_title
     third_party_settings: {  }
     region: content
-  field_newsroom:
+  localgov_homepage_newsroom:
     type: custom_entity_reference_paragraphs
     weight: 27
     settings:
@@ -168,7 +168,7 @@ content:
       form_display_mode: default
       default_paragraph_type: localgov_newsroom_teasers
       hide_type: '1'
-      description_field: field_title
+      description_field: localgov_newsroom_teasers_title
     third_party_settings: {  }
     region: content
   moderation_state:

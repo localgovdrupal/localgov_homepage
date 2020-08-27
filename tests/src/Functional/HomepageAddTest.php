@@ -27,7 +27,7 @@ class HomepageAddTest extends BrowserTestBase {
    */
   public function testCreateHomepage() {
 
-    $account = $this->drupalCreateUser(['create localgov_homepage content']);
+    $account = $this->drupalCreateUser(['create localgov_homepage content', 'view own unpublished content']);
     $this->drupalLogin($account);
 
     $this->drupalGet('node/add/localgov_homepage');
@@ -38,24 +38,24 @@ class HomepageAddTest extends BrowserTestBase {
     $page->fillField('title[0][value]', 'I am a LocalGov homepage :)');
 
     // Banner.
-    $page->fillField('field_banner_colour', '#000000');
-    $page->fillField('files[field_banner_0]', \Drupal::service('file_system')->realpath('core/modules/image/sample.png'));
+    $page->fillField('localgov_homepage_banner_colour', '#000000');
+    $page->fillField('files[localgov_homepage_banner_0]', \Drupal::service('file_system')->realpath('core/modules/image/sample.png'));
 
     // CTAs i.e. Icon collection.
-    $page->fillField('field_homepage_icons[0][subform][field_title][0][value]', 'Drupal');
-    $page->fillField('field_homepage_icons[0][subform][field_icon][0][icon_name]', 'drupal');
+    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icons_title][0][value]', 'Drupal');
+    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icons_icon][0][icon_name]', 'drupal');
 
     // Service links.
-    $page->fillField('field_ia_blocks[0][subform][field_title][0][value]', 'Wordpress');
-    $page->fillField('field_ia_blocks[0][subform][field_link][0][uri]', 'https://wordpress.org/');
-    $page->fillField('field_ia_blocks[0][subform][field_links][0][title]', 'Plugins');
-    $page->fillField('field_ia_blocks[0][subform][field_links][0][uri]', 'https://wordpress.org/plugins/');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_title][0][value]', 'Wordpress');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_link][0][uri]', 'https://wordpress.org/');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_links][0][title]', 'Plugins');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_links][0][uri]', 'https://wordpress.org/plugins/');
 
     // News CTAs.
-    $page->fillField('field_newsroom[0][subform][field_title][0][value]', 'Drupal release news');
-    $page->fillField('field_newsroom[0][subform][field_link][0][uri]', 'https://www.drupal.org/project/drupal/releases/');
-    $page->fillField('field_newsroom[0][subform][field_summary][0][value]', 'A new Drupal version has been released.');
-    $page->fillField('files[field_newsroom_0_subform_field_image_0]', \Drupal::service('file_system')->realpath('core/modules/system/images/no_screenshot.png'));
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_title][0][value]', 'Drupal release news');
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_link][0][uri]', 'https://www.drupal.org/project/drupal/releases/');
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_summar][0][value]', 'A new Drupal version has been released.');
+    $page->fillField('files[localgov_homepage_newsroom_0_subform_localgov_newsroom_teasers_image_0]', \Drupal::service('file_system')->realpath('core/modules/system/images/no_screenshot.png'));
 
     $this->submitForm([], 'Save');
     $this->assertSession()->statusCodeEquals(200);

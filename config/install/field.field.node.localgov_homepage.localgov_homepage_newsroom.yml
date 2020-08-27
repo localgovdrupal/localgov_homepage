@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_newsroom
+    - field.storage.node.localgov_homepage_newsroom
     - node.type.localgov_homepage
     - paragraphs.paragraphs_type.localgov_newsroom_teasers
   module:
     - entity_reference_revisions
-id: node.localgov_homepage.field_newsroom
-field_name: field_newsroom
+id: node.localgov_homepage.localgov_homepage_newsroom
+field_name: localgov_homepage_newsroom
 entity_type: node
 bundle: localgov_homepage
 label: Newsroom
@@ -24,10 +24,10 @@ settings:
     target_bundles:
       localgov_newsroom_teasers: localgov_newsroom_teasers
     target_bundles_drag_drop:
-      localgov_homepage_ia_blocks:
+      localgov_ia_blocks:
         weight: 29
         enabled: false
-      localgov_homepage_icons:
+      localgov_labelled_icons:
         weight: 30
         enabled: false
       localgov_newsroom_teasers:

@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner
+    - field.storage.node.localgov_homepage_banner
     - node.type.localgov_homepage
   module:
     - image
-id: node.localgov_homepage.field_banner
-field_name: field_banner
+id: node.localgov_homepage.localgov_homepage_banner
+field_name: localgov_homepage_banner
 entity_type: node
 bundle: localgov_homepage
 label: Banner

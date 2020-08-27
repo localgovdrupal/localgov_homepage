@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_homepage_icons
+    - field.storage.node.localgov_homepage_labelled_icons
     - node.type.localgov_homepage
-    - paragraphs.paragraphs_type.localgov_homepage_icons
+    - paragraphs.paragraphs_type.localgov_labelled_icons
   module:
     - entity_reference_revisions
-id: node.localgov_homepage.field_homepage_icons
-field_name: field_homepage_icons
+id: node.localgov_homepage.localgov_homepage_labelled_icons
+field_name: localgov_homepage_labelled_icons
 entity_type: node
 bundle: localgov_homepage
 label: 'Calls to action'
@@ -22,12 +22,12 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      localgov_homepage_icons: localgov_homepage_icons
+      localgov_labelled_icons: localgov_labelled_icons
     target_bundles_drag_drop:
-      localgov_homepage_icons:
+      localgov_labelled_icons:
         enabled: true
         weight: 7
-      localgov_homepage_ia_blocks:
+      localgov_ia_blocks:
         weight: 27
         enabled: false
 field_type: entity_reference_revisions

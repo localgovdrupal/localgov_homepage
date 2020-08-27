@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.localgov_homepage.field_banner
-    - field.field.node.localgov_homepage.field_homepage_icons
-    - field.field.node.localgov_homepage.field_ia_blocks
-    - field.field.node.localgov_homepage.field_newsroom
+    - field.field.node.localgov_homepage.localgov_homepage_banner
+    - field.field.node.localgov_homepage.localgov_homepage_labelled_icons
+    - field.field.node.localgov_homepage.localgov_homepage_ia_blocks
+    - field.field.node.localgov_homepage.localgov_homepage_newsroom
     - node.type.localgov_homepage
   module:
     - user
@@ -21,8 +21,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_banner: true
-  field_banner_colour: true
-  field_homepage_icons: true
-  field_ia_blocks: true
-  field_newsroom: true
+  localgov_homepage_banner: true
+  localgov_homepage_banner_colour: true
+  localgov_homepage_labelled_icons: true
+  localgov_homepage_ia_blocks: true
+  localgov_homepage_newsroom: true
