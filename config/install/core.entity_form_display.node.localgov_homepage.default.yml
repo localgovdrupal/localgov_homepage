@@ -30,6 +30,7 @@ third_party_settings:
         classes: ''
         direction: vertical
       label: Tabs
+      region: content
     group_description:
       children:
         - title
@@ -43,6 +44,7 @@ third_party_settings:
         description: ''
         required_fields: false
       label: Description
+      region: content
     group_icons:
       children:
         - field_homepage_icons
@@ -57,6 +59,7 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: 'Calls to action'
+      region: content
     group_ca:
       children:
         - field_ia_blocks
@@ -71,6 +74,7 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: Services
+      region: content
     group_banner:
       children:
         - field_banner_colour
@@ -85,6 +89,7 @@ third_party_settings:
         description: ''
         required_fields: false
       label: Banner
+      region: content
     group_newsroom:
       children:
         - field_newsroom
@@ -98,6 +103,7 @@ third_party_settings:
         description: ''
         required_fields: false
       label: Newsroom
+      region: content
 id: node.localgov_homepage.default
 targetEntityType: node
 bundle: localgov_homepage
