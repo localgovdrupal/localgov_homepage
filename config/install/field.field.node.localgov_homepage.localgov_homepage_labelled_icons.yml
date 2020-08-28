@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.localgov_homepage_labelled_icons
     - node.type.localgov_homepage
-    - paragraphs.paragraphs_type.localgov_labelled_icons
+    - paragraphs.paragraphs_type.localgov_labelled_icon
   module:
     - entity_reference_revisions
 id: node.localgov_homepage.localgov_homepage_labelled_icons
@@ -22,12 +22,12 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      localgov_labelled_icons: localgov_labelled_icons
+      localgov_labelled_icon: localgov_labelled_icon
     target_bundles_drag_drop:
-      localgov_labelled_icons:
+      localgov_labelled_icon:
         enabled: true
         weight: 7
-      localgov_ia_blocks:
+      localgov_ia_block:
         weight: 27
         enabled: false
 field_type: entity_reference_revisions

@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.localgov_homepage_newsroom
     - node.type.localgov_homepage
-    - paragraphs.paragraphs_type.localgov_newsroom_teasers
+    - paragraphs.paragraphs_type.localgov_newsroom_teaser
   module:
     - entity_reference_revisions
 id: node.localgov_homepage.localgov_homepage_newsroom
@@ -22,15 +22,15 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      localgov_newsroom_teasers: localgov_newsroom_teasers
+      localgov_newsroom_teaser: localgov_newsroom_teaser
     target_bundles_drag_drop:
-      localgov_ia_blocks:
+      localgov_ia_block:
         weight: 29
         enabled: false
-      localgov_labelled_icons:
+      localgov_labelled_icon:
         weight: 30
         enabled: false
-      localgov_newsroom_teasers:
+      localgov_newsroom_teaser:
         enabled: true
         weight: 34
 field_type: entity_reference_revisions

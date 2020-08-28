@@ -42,20 +42,20 @@ class HomepageAddTest extends BrowserTestBase {
     $page->fillField('files[localgov_homepage_banner_0]', \Drupal::service('file_system')->realpath('core/modules/image/sample.png'));
 
     // CTAs i.e. Icon collection.
-    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icons_title][0][value]', 'Drupal');
-    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icons_icon][0][icon_name]', 'drupal');
+    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icon_title][0][value]', 'Drupal');
+    $page->fillField('localgov_homepage_labelled_icons[0][subform][localgov_labelled_icon_icon][0][icon_name]', 'drupal');
 
     // Service links.
-    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_title][0][value]', 'Wordpress');
-    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_link][0][uri]', 'https://wordpress.org/');
-    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_links][0][title]', 'Plugins');
-    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_blocks_links][0][uri]', 'https://wordpress.org/plugins/');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_block_title][0][value]', 'Wordpress');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_block_link][0][uri]', 'https://wordpress.org/');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_block_links][0][title]', 'Plugins');
+    $page->fillField('localgov_homepage_ia_blocks[0][subform][localgov_ia_block_links][0][uri]', 'https://wordpress.org/plugins/');
 
     // News CTAs.
-    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_title][0][value]', 'Drupal release news');
-    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_link][0][uri]', 'https://www.drupal.org/project/drupal/releases/');
-    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teasers_summar][0][value]', 'A new Drupal version has been released.');
-    $page->fillField('files[localgov_homepage_newsroom_0_subform_localgov_newsroom_teasers_image_0]', \Drupal::service('file_system')->realpath('core/modules/system/images/no_screenshot.png'));
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teaser_title][0][value]', 'Drupal release news');
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teaser_link][0][uri]', 'https://www.drupal.org/project/drupal/releases/');
+    $page->fillField('localgov_homepage_newsroom[0][subform][localgov_newsroom_teaser_summary][0][value]', 'A new Drupal version has been released.');
+    $page->fillField('files[localgov_homepage_newsroom_0_subform_localgov_newsroom_teaser_image_0]', \Drupal::service('file_system')->realpath('core/modules/system/images/no_screenshot.png'));
 
     $this->submitForm([], 'Save');
     $this->assertSession()->statusCodeEquals(200);
